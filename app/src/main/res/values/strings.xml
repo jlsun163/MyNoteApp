@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">天天码字</string>
+    <string name="hello_world">天天码字</string>
+    <string name="action_settings">Settings</string>
+    <string name="book_recently">最近</string>
+    <string name="charts">统计</string>
+    <string name="push_in">导入</string>
+    <string name="user_life">生涯</string>
+    <string name="setting_tool">设置</string>
+</resources>

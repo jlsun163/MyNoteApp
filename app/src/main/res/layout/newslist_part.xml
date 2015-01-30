@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:padding="10dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#49dafa"
+        android:text="●"
+        android:layout_marginLeft="9dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/cycle"
+        />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/listPartGoToBookTextView"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:textColor="#0099CC"-->
+        <!--android:textSize="15dp"-->
+        <!--android:text="快速创建章节"-->
+        <!--android:padding="3dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@drawable/strokeclicked"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--/>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listPartNewVauleTextView"
+        android:layout_toRightOf="@+id/cycle"
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="#666"
+        android:textSize="15dp"
+        android:maxLines="3"
+        />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+
+        <color name="software_textColor_selected">#F0F0F0</color>
+        <color name="software_textColor_unselected">#FFFFFF</color>
+        <color name="fontblack">#444444</color>
+    <color name="baidublue">#2d64b3</color>
+    <color name="wechagreeen">#00cc0d</color>
+    <color name="white">#FFFFFF</color>
+
+
+</resources>

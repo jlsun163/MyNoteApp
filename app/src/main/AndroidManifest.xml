@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.daiylywriting"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fuanxieapp"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="false"
+        android:launchMode="singleTask"
+        tools:replace="android:icon, android:theme"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity
+            android:name=".MainActivity.MainActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FragmentPage.EditActivity.EditMYActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize"
+            android:hardwareAccelerated="false"
+            ></activity>
+        <!--<activity android:name=".OtherActivity.SingleEditText_Activity"-->
+            <!--android:windowSoftInputMode="adjustResize"-->
+            <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"-->
+            <!--android:hardwareAccelerated="false"-->
+            <!--></activity>-->
+        <activity android:name=".OtherActivity.SingerChapterAdd"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:hardwareAccelerated="false"
+            ></activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

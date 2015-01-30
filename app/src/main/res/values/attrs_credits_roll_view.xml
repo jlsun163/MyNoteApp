@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="CreditsRollView">
+        <attr name="scrollPosition" format="float" />
+        <attr name="angle" format="float" />
+        <attr name="endScrollMultiplier" format="float" />
+        <attr name="distanceFromText" format="float" />
+    </declare-styleable>
+</resources>
