@@ -18,9 +18,14 @@ import android.widget.TextView;
 import com.example.administrator.daiylywriting.ApplicationForWriting.GreenDaoService;
 import com.example.administrator.daiylywriting.BooksSqilte.Charpters;
 import com.example.administrator.daiylywriting.FragmentPage.EditActivity.EditMYActivity;
+import com.example.administrator.daiylywriting.MyDailyTools.Push_NewTxT;
 import com.example.administrator.daiylywriting.MyOwnViews.MyDialog;
+import com.example.administrator.daiylywriting.OtherActivity.SomeStaticThing;
 import com.example.administrator.daiylywriting.R;
 
+import org.w3c.dom.Text;
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Date;
@@ -98,6 +103,29 @@ public class Adapter_ChapterRecycle extends RecyclerView.Adapter<Adapter_Chapter
                 activity.startActivity(intent);
             }
         });
+        holder.pushUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * chapter change to txt in SD-card
+                 * */
+                Push_NewTxT push_newTxT =new Push_NewTxT(activity);
+                push_newTxT.makeFilePath(bookName,charpterses.get(position).getCharpterName());
+                push_newTxT.writeSDFile(charpterses.get(position).getCharpterVaules(),charpterses.get(position).getCharpterName(),bookName);
+                MyDialog myDialog =new MyDialog();
+                Dialog pushDialog = myDialog.pushStatusDialog(activity,R.style.popupDialog);
+                /**
+                 * Show the push details(Chapter push to be the txt file)
+                 */
+                Window pushWindow = pushDialog.getWindow();
+                TextView mChapterNameVaule = (TextView) pushWindow.findViewById(R.id.chapterNameVaule);
+                TextView mPushStatus = (TextView) pushWindow.findViewById(R.id.pushStatus);
+                TextView mPushPath = (TextView) pushWindow.findViewById(R.id.pushPath);
+                mChapterNameVaule.setText(charpterses.get(position).getCharpterName());
+                mPushStatus.setText("保存成功!");
+                mPushPath.setText("SD卡中/天天码字的小说/"+bookName+"/"+charpterses.get(position).getCharpterName()+".txt");
+            }
+        });
     }
     public void addItem(Charpters charpters, int position) {
         charpterses.add(position, charpters);
@@ -160,9 +188,10 @@ public class Adapter_ChapterRecycle extends RecyclerView.Adapter<Adapter_Chapter
                 Charpters charpters = new Charpters();
                 charpters.setBookKey(bookkey);
                 charpters.setCharpterName(chapterNameVaule.getText().toString());
-                charpters.setCharpterKey(chapterNameVaule.getText().toString()+timeKeyVaule);
+                charpters.setCharpterKey(chapterNameVaule.getText().toString() + timeKeyVaule);
                 charpters.setChapterVauleNumbers(0);
                 charpters.setCharpterVaules("");
+                charpters.setIsDeleted(false);
                 charpters.setCreateTime(timeKeyVaule);
                 mCharpterses.add(charpters);
                 greenDaoService.saveOrReplacChapters(mCharpterses);

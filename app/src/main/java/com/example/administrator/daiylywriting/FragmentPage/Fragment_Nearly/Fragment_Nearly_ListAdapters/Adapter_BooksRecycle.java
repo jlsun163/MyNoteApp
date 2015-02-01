@@ -268,6 +268,7 @@ public class Adapter_BooksRecycle extends RecyclerView.Adapter<Adapter_BooksRecy
         charpters.setCharpterKey(chapterNameVaule + timeKeyVaule);
         charpters.setChapterVauleNumbers(0);
         charpters.setCharpterVaules("");
+        charpters.setIsDeleted(false);
         charpters.setCreateTime(timeKeyVaule);
         mCharpterses.add(charpters);
         greenDaoService.saveOrReplacChapters(mCharpterses);

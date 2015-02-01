@@ -9,20 +9,6 @@
         <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\greendao-generator-1.3.1-6e156a0a069072e748b6e8092402c9d5fc08c5fa.jar" />
     </item>
     <item
-        jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\libs\freemarker-2.3.21.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6c2d24aca63fadba2c99fb65218769cfb11099f4">
-        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\freemarker-2.3.21-57e7ac8acf2d35b676288d9c7bd0838ec435a82a.jar" />
-    </item>
-    <item
-        jar="I:\assdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-775178cd7aa67b6c7591980f62411217e33cb3f8.jar" />
-    </item>
-    <item
         jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.7.1\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -30,11 +16,25 @@
         <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\classes-33da85bf96449460b8bcdb2bbbfbdb353cb4c630.jar" />
     </item>
     <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.daimajia.androidanimations\library\1.1.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85ccb558dc8258ecf4f0a19e97a3114ec2c64cb4">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-32ebe868c2066f7c6f3292795fa5e4790d84c925.jar" />
+    </item>
+    <item
         jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\classes-79199b4194ea2841c75a0914026c201ad76b2cfb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\libs\xcl-charts.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="20c7e51a6f0fb270bfd14d054efefc2fb17b57e0">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\xcl-charts-4389d6e2026541a19afd6373c6184866f94b90c2.jar" />
     </item>
     <item
         jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\libs\greendao-1.3.7.jar"
@@ -51,6 +51,76 @@
         <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\classes-5f82c02cdd2497a2024798d943814dd4db5cbe62.jar" />
     </item>
     <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-40b76e6099c89a81380bb830e1e9cc0449e70046.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\libs\freemarker-2.3.21.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6c2d24aca63fadba2c99fb65218769cfb11099f4">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\freemarker-2.3.21-fb71a9ce0894879745a651f9f37728f32c76c010.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\library-2.4.0-dd460f45d27a359687729c3c169358b1eda3100b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\libs\greendao-1.3.7.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\greendao-1.3.7-95db7ca0bc80cd5b78f0bf466f1bb985ba8e2169.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\exploded-aar\com.daimajia.easing\library\1.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e88a9ed27f98f8c0701d03d5553ce6111ca34a5b">
+        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\classes-efa4df35dc43d73320412d8972d32bac2bfc26c3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-3c2d564ffcc73bdc87b29a07da5062d4857cc86e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-68cc7099732f4adc97381e0a2a8a20802ade4761.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\libs\freemarker-2.3.21.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6c2d24aca63fadba2c99fb65218769cfb11099f4">
+        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\freemarker-2.3.21-57e7ac8acf2d35b676288d9c7bd0838ec435a82a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.8.1\1eb6690b0c629d7000c77a72df5e822fb974f521\jsoup-1.8.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1eb6690b0c629d7000c77a72df5e822fb974f521">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\jsoup-1.8.1-10c11de27988cee30f803c40143aa2a3ce08458b.jar" />
+    </item>
+    <item
+        jar="I:\assdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-775178cd7aa67b6c7591980f62411217e33cb3f8.jar" />
+    </item>
+    <item
         jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -65,6 +135,13 @@
         <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\classes-c1ab0b485954c7740ad6b329bdb0bbe3edee6eb5.jar" />
     </item>
     <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\libs\greendao-generator-1.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2f757df97b422e40bf99f71094e5d105c98f32e7">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\greendao-generator-1.3.1-3eb7703656a6f6814a5a64a6261e0d990ae00860.jar" />
+    </item>
+    <item
         jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -72,18 +149,39 @@
         <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-705d943d21615c700f03720d1ccecd0908107bc3.jar" />
     </item>
     <item
-        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\library-2.4.0-dd460f45d27a359687729c3c169358b1eda3100b.jar" />
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-825908af1826154ffec3c043929e005c12e3a0e8.jar" />
     </item>
     <item
-        jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\exploded-aar\com.daimajia.easing\library\1.0.0\classes.jar"
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-49bc955495d9451125a61c80931ac52519613175.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.daimajia.easing\library\1.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="e88a9ed27f98f8c0701d03d5553ce6111ca34a5b">
-        <dex dex="C:\Users\Administrator\Desktop\DailyWritingForBis\app\build\intermediates\pre-dexed\debug\classes-efa4df35dc43d73320412d8972d32bac2bfc26c3.jar" />
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-afe79d8e872475974b1e6c8bb51b2aa2b7b1b04c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.7.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="646a2b29dfd386add9f71768c9e40d8f730e9392">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-023be41fdca7bd546b0ed71edccc68b586672c50.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="C:\Users\Administrator\Desktop\MyNoteApp-master\app\build\intermediates\pre-dexed\debug\classes-2e60cfb8ecdbd464111c7b967a0b5c9176135a27.jar" />
     </item>
     <item
         jar="C:\Users\Administrator\Desktop\DailyWritingForBis\app\libs\xcl-charts.jar"

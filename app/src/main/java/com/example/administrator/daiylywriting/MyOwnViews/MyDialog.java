@@ -3,6 +3,7 @@ package com.example.administrator.daiylywriting.MyOwnViews;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.WindowManager;
@@ -40,6 +41,40 @@ public class MyDialog {
         customDialog.setCancelable(true);
         customDialog.setCanceledOnTouchOutside(true);
         customDialog.setContentView(dialogView);
+        if (context instanceof Activity) {
+            Activity activity = (Activity) context;
+            if (!activity.isFinishing()) {
+                customDialog.show();
+                InputMethodManager imm = (InputMethodManager) context
+                        .getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        }
+        return customDialog;
+    }
+
+    public Dialog pushStatusDialog(Context context, int style) {
+        this.context = context;
+        this.style = style;
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        CardView myPushDialogView = (CardView) inflater.inflate(R.layout.cardview_chapterpushout, null);
+        final Dialog customDialog = new Dialog(context, style);
+
+        WindowManager.LayoutParams localLayoutParams = customDialog.getWindow().getAttributes();
+        localLayoutParams.gravity = Gravity.CENTER | Gravity.CENTER;
+
+        int screenWidth = ((Activity) context).getWindowManager().getDefaultDisplay().getWidth();
+        myPushDialogView.setMinimumWidth(screenWidth*2/3);
+        // dialogView.setMinimumHeight(10);
+
+        customDialog.onWindowAttributesChanged(localLayoutParams);
+        customDialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
+        );
+        customDialog.setCanceledOnTouchOutside(false);
+        customDialog.setCancelable(true);
+        customDialog.setCanceledOnTouchOutside(true);
+        customDialog.setContentView(myPushDialogView);
         if (context instanceof Activity) {
             Activity activity = (Activity) context;
             if (!activity.isFinishing()) {

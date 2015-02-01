@@ -2,6 +2,7 @@ package com.example.administrator.daiylywriting.FragmentPage.Fragment_Main;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +14,17 @@ import com.example.administrator.daiylywriting.ApplicationForWriting.GreenDaoSer
 import com.example.administrator.daiylywriting.MyChartsView.PieChartTwo;
 import com.example.administrator.daiylywriting.MyChartsView.PieDateStruct;
 import com.example.administrator.daiylywriting.MyOwnViews.BaseFragment;
+import com.example.administrator.daiylywriting.OtherActivity.SomeStaticThing;
 import com.example.administrator.daiylywriting.R;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.xclcharts.chart.PieChart;
 import org.xclcharts.chart.PieData;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
@@ -43,6 +50,8 @@ public class Fragment_Charts extends BaseFragment {
     private TextView mChartsRadio_CollectionImg;
     private TextView mChartsRadio_CollectionText;
     private com.example.administrator.daiylywriting.MyChartsView.PieChartTwo mBookPieChart;
+    private Handler handler =new Handler();
+    private Document doc = null;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_charts, container, false);
     }
@@ -160,6 +169,7 @@ public class Fragment_Charts extends BaseFragment {
                         break;
                     case R.id.chartsRadio_ClickDiv:
                         pieChart.setTitle("点击统计");
+                         initSearchWeb();
                         mBookPieChart.invalidate();
                         mChartsRadio_ClickText.setTextColor(Color.parseColor("#49dafa"));
                         break;
@@ -170,10 +180,37 @@ public class Fragment_Charts extends BaseFragment {
                         break;
                 }
 
-
               }
           });
       }
+
+    private void initSearchWeb() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    doc = Jsoup.connect("http://www.qidian.com/Book/3347952.aspx").timeout(15000).get();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Element linkName = doc.select("h1[itemprop]").first();
+                        Element linkNumber = doc.select("span[itemprop$=wordCount]").first();
+                        Element linkStatus = doc.select("span[itemprop$=updataStatus]").first();
+                        Element linkClick = doc.select("span[itemprop$=totalClick]").first();
+                        Element linkRecommend = doc.select("span[itemprop$=totalRecommend]").first();
+                        SomeStaticThing.toastSomthing(getActivity(),"网络端获取可得:"+linkName.text()+linkNumber.text()+"字"+linkStatus.text()+linkClick.text()+"点击"+linkRecommend.text()+"推荐");
+                    }
+                });
+
+            }
+        }).start();
+
+
+    }
 
     private void initMChartsColor(){
         mChartsRadio_DailyNumbersText.setTextColor(Color.GRAY);

@@ -54,7 +54,7 @@ public class GreenDaoService {
     }
 
     public List<BooksVaules> loadAllBookVaules(){
-        return booksVaulesDao.loadAll();
+        return booksVaulesDao.queryBuilder().where(BooksVaulesDao.Properties.IsDeleted.eq(false)).list();
     }
     /**
      * query list with where clause
@@ -143,7 +143,7 @@ public class GreenDaoService {
     }
 
      public List<Charpters> getChaptersOfBook(String BookKeyStr){
-         return charptersDao.queryBuilder().where(CharptersDao.Properties.BookKey.eq(BookKeyStr)).list();
+         return charptersDao.queryBuilder().where(CharptersDao.Properties.BookKey.eq(BookKeyStr)).where(CharptersDao.Properties.IsDeleted.eq(false)). list();
      }
     public List<Charpters> getTheOnlyChapters(String ChapterKey){
         return charptersDao.queryBuilder().where(CharptersDao.Properties.CharpterKey.eq(ChapterKey)).list();
