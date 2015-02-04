@@ -1,5 +1,6 @@
 package com.example.administrator.daiylywriting.FragmentPage.Fragment_Main;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +15,8 @@ import com.example.administrator.daiylywriting.ApplicationForWriting.GreenDaoSer
 import com.example.administrator.daiylywriting.MyChartsView.PieChartTwo;
 import com.example.administrator.daiylywriting.MyChartsView.PieDateStruct;
 import com.example.administrator.daiylywriting.MyOwnViews.BaseFragment;
+import com.example.administrator.daiylywriting.MyService.CallServiceWhenOpen;
+import com.example.administrator.daiylywriting.MyService.SearchBookStatus;
 import com.example.administrator.daiylywriting.OtherActivity.SomeStaticThing;
 import com.example.administrator.daiylywriting.R;
 
@@ -81,7 +84,9 @@ public class Fragment_Charts extends BaseFragment {
     @Override
     public void showContent() {
         //设置图标数据
-        mBookPieChart.initPieData(getSevenDays());
+        if (greenDaoService.getAllDateBigData().size()>0) {
+            mBookPieChart.initPieData(getSevenDays());
+        }
     }
 
     @Override
@@ -169,8 +174,10 @@ public class Fragment_Charts extends BaseFragment {
                         break;
                     case R.id.chartsRadio_ClickDiv:
                         pieChart.setTitle("点击统计");
-                         initSearchWeb();
-                        mBookPieChart.invalidate();
+//                         initSearchWeb();
+                        getActivity().startService(new Intent(getActivity(),SearchBookStatus.class));
+//                        getActivity().stopService(new Intent(getActivity(),SearchBookStatus.class));
+//                        mBookPieChart.invalidate();
                         mChartsRadio_ClickText.setTextColor(Color.parseColor("#49dafa"));
                         break;
                     case R.id.chartsRadio_CollectionDiv:
@@ -197,12 +204,15 @@ public class Fragment_Charts extends BaseFragment {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
+                        System.out.println(doc);
+                        if (doc!=null) {
                         Element linkName = doc.select("h1[itemprop]").first();
                         Element linkNumber = doc.select("span[itemprop$=wordCount]").first();
                         Element linkStatus = doc.select("span[itemprop$=updataStatus]").first();
                         Element linkClick = doc.select("span[itemprop$=totalClick]").first();
                         Element linkRecommend = doc.select("span[itemprop$=totalRecommend]").first();
                         SomeStaticThing.toastSomthing(getActivity(),"网络端获取可得:"+linkName.text()+linkNumber.text()+"字"+linkStatus.text()+linkClick.text()+"点击"+linkRecommend.text()+"推荐");
+                        }
                     }
                 });
 

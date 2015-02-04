@@ -11,6 +11,8 @@ import com.example.administrator.daiylywriting.BooksSqilte.CharptersDao;
 import com.example.administrator.daiylywriting.BooksSqilte.DaoSession;
 import com.example.administrator.daiylywriting.BooksSqilte.NowHappents;
 import com.example.administrator.daiylywriting.BooksSqilte.NowHappentsDao;
+import com.example.administrator.daiylywriting.BooksSqilte.WebData;
+import com.example.administrator.daiylywriting.BooksSqilte.WebDataDao;
 
 import java.util.List;
 
@@ -26,6 +28,7 @@ public class GreenDaoService {
     private NowHappentsDao nowHappentsDao;
     private CharptersDao charptersDao;
     private BigDataDao bigDataDao;
+    private WebDataDao webDataDao;
     private GreenDaoService(){}
     public static GreenDaoService getGreenDaoService(Context context){
         if (greenDaoService==null){
@@ -41,6 +44,7 @@ public class GreenDaoService {
             //章节的Servive
             greenDaoService.charptersDao=greenDaoService.daoSession.getCharptersDao();
             greenDaoService.bigDataDao=greenDaoService.daoSession.getBigDataDao();
+            greenDaoService.webDataDao=greenDaoService.daoSession.getWebDataDao();
         }
         return greenDaoService;
     }
@@ -205,4 +209,8 @@ public class GreenDaoService {
         return bigDataDao.loadAll();
     }
 
+  /*save the data get from web*/
+  public void saveOrReplacWebData(WebData webData) {
+      webDataDao.insertOrReplace(webData);
+  }
 }
