@@ -16,8 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 import com.example.administrator.daiylywriting.ApplicationForWriting.GreenDaoService;
 import com.example.administrator.daiylywriting.BooksSqilte.BooksVaules;
 import com.example.administrator.daiylywriting.BooksSqilte.Charpters;
@@ -94,7 +92,6 @@ public class Adapter_BooksRecycle extends RecyclerView.Adapter<Adapter_BooksRecy
                 @Override
                 public void onClick(View v) {
 //                    setSelectorList(viewHolder.cardView);
-                    YoYo.with(Techniques.Wobble).duration(700).playOn(viewHolder.cardView);
                     initChapterListView(bookModels.get(i));
                 }
             });

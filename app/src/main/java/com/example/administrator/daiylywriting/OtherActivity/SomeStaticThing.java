@@ -52,5 +52,6 @@ public class SomeStaticThing {
         return m.replaceAll("").trim();
     }
 
+
 }
 

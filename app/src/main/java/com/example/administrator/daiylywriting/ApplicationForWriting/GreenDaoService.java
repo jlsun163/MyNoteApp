@@ -13,6 +13,7 @@ import com.example.administrator.daiylywriting.BooksSqilte.NowHappents;
 import com.example.administrator.daiylywriting.BooksSqilte.NowHappentsDao;
 import com.example.administrator.daiylywriting.BooksSqilte.WebData;
 import com.example.administrator.daiylywriting.BooksSqilte.WebDataDao;
+import com.example.administrator.daiylywriting.FragmentPage.Fragment_Charts.ChartsData.WebBookDatas;
 
 import java.util.List;
 
@@ -213,4 +214,25 @@ public class GreenDaoService {
   public void saveOrReplacWebData(WebData webData) {
       webDataDao.insertOrReplace(webData);
   }
+
+  public List<WebData> getAllWebData(){
+      return webDataDao.loadAll();
+  }
+
+  public List<WebData> getDayWebData(String dateKey){
+      return webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).list();
+  }
+  public WebBookDatas getParticularWebData(String dateKey){
+      WebBookDatas webBookDatas =new WebBookDatas();
+      webBookDatas.setWebData0to9(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(0,8)).list());
+      webBookDatas.setWebData9to11(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(9,10)).list());
+      webBookDatas.setWebData11to13(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(11,12)).list());
+      webBookDatas.setWebData13to15(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(13,14)).list());
+      webBookDatas.setWebData15to18(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(15,17)).list());
+      webBookDatas.setWebData18to20(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(18,19)).list());
+      webBookDatas.setWebData20to22(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(20,21)).list());
+      webBookDatas.setWebData22to24(webDataDao.queryBuilder().where(WebDataDao.Properties.TimeDay.eq(dateKey)).where(WebDataDao.Properties.TimeHour.between(22,23)).list());
+      return webBookDatas;
+  }
+
 }

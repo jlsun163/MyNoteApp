@@ -12,6 +12,7 @@ import com.example.administrator.daiylywriting.BooksSqilte.NowHappents;
 import com.example.administrator.daiylywriting.FragmentPage.Fragment_Nearly.Fragment_Nearly_ListAdapters.Adapter_News;
 import com.example.administrator.daiylywriting.MyOwnViews.BaseFragment;
 import com.example.administrator.daiylywriting.R;
+import com.example.administrator.daiylywriting.Views_For_Layout.FragmentViews_Nearly_Activity;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -21,19 +22,18 @@ import java.util.List;
  * Created by Administrator on 2014/12/28.
  */
 public class Fragment_Nearly_Activity extends BaseFragment {
-    private ListView newsListview;
     private GreenDaoService greenDaoService;
     private Adapter_News newsAdapter;
-    private TextView mWelcomeIfNoBook;
+    private FragmentViews_Nearly_Activity fragmentViews_nearly_activity;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_nearly_activity, container, false);
+        fragmentViews_nearly_activity =new FragmentViews_Nearly_Activity(getActivity());
+        return fragmentViews_nearly_activity;
     }
 
 
     @Override
     public void findViews() {
-        newsListview= (ListView) getActivity().findViewById(R.id.newShowListView);
-        mWelcomeIfNoBook= (TextView) getActivity().findViewById(R.id.welcomeIfNoBook);
+
     }
 
     @Override
@@ -49,12 +49,12 @@ public class Fragment_Nearly_Activity extends BaseFragment {
 
     @Override
     public void showContent() {
-        newsListview.setAdapter(newsAdapter);
+        fragmentViews_nearly_activity.mNewShowListView.setAdapter(newsAdapter);
     }
 
     @Override
     public void setInteract() {
-        mWelcomeIfNoBook.setOnClickListener(new View.OnClickListener() {
+        fragmentViews_nearly_activity.mWelcomeIfNoBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment_Nearly.gotoBook();

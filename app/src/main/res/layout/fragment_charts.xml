@@ -107,13 +107,25 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:background="#f0f0f0"></View>
-
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_margin="10dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:id="@+id/chartsDiv"
+           >
+            <!--<com.example.administrator.daiylywriting.MyChartsView.MySplineChart-->
+                <!--android:id="@+id/webDataChart"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+           <!---->
         <com.example.administrator.daiylywriting.MyChartsView.PieChartTwo
             android:id="@+id/bookPieChart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
-
+       </LinearLayout>
 
     </LinearLayout>
 

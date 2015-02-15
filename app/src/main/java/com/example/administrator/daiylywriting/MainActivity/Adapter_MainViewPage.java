@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.administrator.daiylywriting.FragmentPage.Fragment_Main.Fragment_Charts;
+import com.example.administrator.daiylywriting.FragmentPage.Fragment_Charts.Fragment_Charts;
 import com.example.administrator.daiylywriting.FragmentPage.Fragment_Main.Fragment_Me;
 import com.example.administrator.daiylywriting.FragmentPage.Fragment_Nearly.Fragment_Nearly;
 import com.example.administrator.daiylywriting.FragmentPage.Fragment_Main.Fragment_Push;

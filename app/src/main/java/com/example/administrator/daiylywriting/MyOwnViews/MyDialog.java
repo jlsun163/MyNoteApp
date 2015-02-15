@@ -79,9 +79,7 @@ public class MyDialog {
             Activity activity = (Activity) context;
             if (!activity.isFinishing()) {
                 customDialog.show();
-                InputMethodManager imm = (InputMethodManager) context
-                        .getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+
             }
         }
         return customDialog;

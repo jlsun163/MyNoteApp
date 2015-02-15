@@ -11,6 +11,8 @@ public class WebData {
     private Integer LikeNumber;
     private String BookName;
     private String TimeDate;
+    private String TimeDay;
+    private Integer TimeHour;
 
     public WebData() {
     }
@@ -19,12 +21,14 @@ public class WebData {
         this.id = id;
     }
 
-    public WebData(Long id, Integer ClickNumber, Integer LikeNumber, String BookName, String TimeDate) {
+    public WebData(Long id, Integer ClickNumber, Integer LikeNumber, String BookName, String TimeDate, String TimeDay, Integer TimeHour) {
         this.id = id;
         this.ClickNumber = ClickNumber;
         this.LikeNumber = LikeNumber;
         this.BookName = BookName;
         this.TimeDate = TimeDate;
+        this.TimeDay = TimeDay;
+        this.TimeHour = TimeHour;
     }
 
     public Long getId() {
@@ -65,6 +69,22 @@ public class WebData {
 
     public void setTimeDate(String TimeDate) {
         this.TimeDate = TimeDate;
+    }
+
+    public String getTimeDay() {
+        return TimeDay;
+    }
+
+    public void setTimeDay(String TimeDay) {
+        this.TimeDay = TimeDay;
+    }
+
+    public Integer getTimeHour() {
+        return TimeHour;
+    }
+
+    public void setTimeHour(Integer TimeHour) {
+        this.TimeHour = TimeHour;
     }
 
 }
